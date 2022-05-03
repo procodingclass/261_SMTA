@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 100.13, "left": -2.09, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 162.72, "left": 133.75, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "servo1:GND", "esp:GND.2", "black", [ "h-122", "v72.4" ] ],
+    [ "servo1:PWM", "esp:D27", "green", [ "h-132.67", "v12.74" ] ],
+    [ "servo1:V+", "esp:3V3", "green", [ "h0" ] ]
+  ]
+}
